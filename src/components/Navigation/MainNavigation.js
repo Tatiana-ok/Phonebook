@@ -12,7 +12,7 @@ const MainNavigation = ({isAuthenticated}) => (
         className={styles.link}
         activeClassName={styles.activeLink}
       >
-        Главная
+        Головна
       </NavLink>
 
       {isAuthenticated && <NavLink
@@ -20,7 +20,7 @@ const MainNavigation = ({isAuthenticated}) => (
         className={styles.link}
         activeClassName={styles.activeLink}
       >
-        Телефонная книга
+        Телефонна книга
       </NavLink>}
       
     </nav>

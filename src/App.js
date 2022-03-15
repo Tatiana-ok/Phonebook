@@ -29,17 +29,19 @@ function App () {
     // const isLoadingAuth= useSelector(authSelectors.getAuthLoading);
     // const isLoadingContacts= useSelector(phonebookSelectors.getLoading);
     return(
-        <div className={styles.container}>
-            <AppBar />
-                <Suspense fallback={<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} timeout={5000}/>}>
-                <Switch>
-                    <PublicRoute exact path="/" component={HomeView} />
-                    <PublicRoute path="/register" restricted redirectTo="/" component={RegistrationView} />
-                    <PublicRoute path="/login" restricted redirectTo="/contacts" component={LoginView} />
-                    <PrivateRoute path="/contacts" redirectTo="/login" component={PhonebookView}/>
-                    <PublicRoute component={NotFoundView} />
-                </Switch>
-            </Suspense>
+        <div className={styles.img}>
+            <div className={styles.container}>
+                <AppBar  />
+                    <Suspense fallback={<Loader type="ThreeDots" color="#00BFFF" height={80} width={80} timeout={5000}/>}>
+                        <Switch>
+                            <PublicRoute exact path="/" component={HomeView} />
+                            <PublicRoute path="/register" restricted redirectTo="/" component={RegistrationView} />
+                            <PublicRoute path="/login" restricted redirectTo="/contacts" component={LoginView} />
+                            <PrivateRoute path="/contacts" redirectTo="/login" component={PhonebookView}/>
+                            <PublicRoute component={NotFoundView} />
+                        </Switch>
+                    </Suspense>
+            </div>
         </div>
     )
 };

@@ -1,5 +1,16 @@
-.container {
-  width: 1600px;
-  margin-right: auto;
+.container {  
+  width: 1400px;
   margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.img{
+  width: 100vw;
+  height: 100vh;
+  background: no-repeat url('./images/flag3.jpg');
+  /* background-size: 1600px 500px; */
 }

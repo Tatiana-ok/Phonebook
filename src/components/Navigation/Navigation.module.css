@@ -1,6 +1,14 @@
 .link {
   margin-left: 10px;
   color: #010101;
+  font-size: 24px;
+  font-family: 'Caveat', cursive;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:focus {
+  color: rgb(242, 219, 53);
 }
 
 /* .authContainer{

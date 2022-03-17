@@ -9,7 +9,7 @@ const AuthNavigation = () => (
         className={styles.link}
         activeClassName={styles.activeLink}
       >
-          Регістрація
+          Реєстрація
       </NavLink>
           <NavLink
         to="/login"

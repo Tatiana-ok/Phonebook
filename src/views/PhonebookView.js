@@ -5,22 +5,18 @@ import phonebookOperations from '../redux/phonebook/phonebook-operations';
 import ContactForm from '../components/ContactForm/ContactForm';
 import Filter from '../components/Filter/Filter';
 import ContactList from '../components/ContactList/ContactList';
-
-const containerPhonebook = {
-  marginLeft: "10px"
-};
+import styles from './css/PhonebookView.module.css';
 
 const PhonebookView = ({fetchContacts}) => {
-
   useEffect(() => {
     fetchContacts();
   });
 
   return (
-    <div style={containerPhonebook}>
-      <h1>Телефонная книга</h1>
+    <div className={styles.containerPhonebook}>
+      <h1 className={styles.title}>Телефонна книга</h1>
       <ContactForm />
-      <h2>Контакты</h2>
+      <h2>Контакти</h2>
       <Filter />
       <ContactList />
     </div>

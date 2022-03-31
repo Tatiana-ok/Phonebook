@@ -21,9 +21,9 @@ const LoginView = ({onLogin}) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (email === '') { 
-            toast.error('Поле "Адрес почты" не заполнено'); 
+            toast.error('Поле "Адреса пошти" не заповнено'); 
         } if (password.length < 7) { 
-            toast.error('Неправильный пароль'); 
+            toast.error('Невірний пароль'); 
         } else {
             onLogin({email, password});
             setEmail('');
@@ -35,8 +35,8 @@ const LoginView = ({onLogin}) => {
     return (
         <>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <h2>Вход</h2>
-                <label>Адрес почты</label>
+                <h2>Вхід</h2>
+                <label>Адреса пошти</label>
                 <input
                     className={styles.input}
                     type="text"
@@ -46,12 +46,12 @@ const LoginView = ({onLogin}) => {
                 <label>Пароль</label>
                 <input
                     className={styles.input}
-                    type="text"
+                    type="password"
                     onChange={onPasswordChange}
                     value={password}
                 />
                 <ToastContainer />
-                <Button className={styles.button} variant="primary" type="submit">Войти</Button>
+                <Button className={styles.button} variant="primary" type="submit">Увійти</Button>
             </form>
         </>
     )

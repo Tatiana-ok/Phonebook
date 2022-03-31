@@ -1,0 +1,13 @@
+.containerPhonebook {
+    width: 1000px;
+    height: 90vh;
+    margin-left: 10px;
+    margin-top: 10px;
+    background: no-repeat url('../../images/bloknot2.jpg');
+    font-family: 'Caveat', cursive;
+}
+
+.title{
+    padding-top: 25px;
+    padding-left: 100px;
+}

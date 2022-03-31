@@ -12,11 +12,12 @@ const HomeView = () => {
                         <li><p>React Redux</p></li>
                         <li><p>React Hooks</p></li>
                         <li><p>CSS modules</p></li>
+                        <li><p>Bootstrap</p></li>
                     </ul>
                 </div>
                 <div className={styles.main}>
                     <h1 className={styles.please}>Будь ласка, зареєструйтесь!</h1>
-                    <button type='button' className={styles.btnStart}><NavLink to="/register">Почати</NavLink></button>
+                    <button type='button' className={styles.btnStart}><NavLink className={styles.linkStart} to="/register">Почати</NavLink></button>
                 </div>
             </div>
         </>

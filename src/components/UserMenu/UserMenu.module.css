@@ -5,4 +5,17 @@
 .welcome {
   margin-right: 15px;
   margin-bottom: 0px;
+  font-size: 24px;
+  font-family: 'Caveat', cursive;
+}
+
+.exitBtn{
+  width: 75px;
+  height: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.btn{
+  padding: 0px;
 }

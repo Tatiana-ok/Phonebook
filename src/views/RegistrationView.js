@@ -32,11 +32,11 @@ const RegistrationView = ({onRegister}) => {
     const handleSubmit = e => {
         e.preventDefault();
         if (name === '') {
-            toast.error('Поле "Имя" не заполнено');
+            toast.error('Поле "Ім`я" не заповнено');
         } if (email === '') { 
-            toast.error('Поле "Адрес почты" не заполнено'); 
+            toast.error('Поле "Адреса пошти" не заповнено'); 
         } if (password.length < 7) { 
-            toast.error('Неправильный пароль'); 
+            toast.error('Невірний пароль'); 
         } else {
             onRegister({ name, email, password });
             setName('');
@@ -48,8 +48,8 @@ const RegistrationView = ({onRegister}) => {
     return (
         <>
             <form className={styles.form} onSubmit={handleSubmit} autoComplete='off'>
-                <h2>Регистрация нового пользователя</h2>
-                <label htmlFor='name'>Имя</label>
+                <h2>Реєстрація нового користувача</h2>
+                <label htmlFor='name'>Им'я</label>
                 <input
                     name='name'
                     id='name'
@@ -58,7 +58,7 @@ const RegistrationView = ({onRegister}) => {
                     onChange={onHandleChange}
                     value={name}
                 />
-                <label htmlFor='email'>Адрес почты</label>
+                <label htmlFor='email'>Адреса пошти</label>
                 <input
                     name='email'
                     id='email'
@@ -72,12 +72,24 @@ const RegistrationView = ({onRegister}) => {
                     name='password'
                     id='password'
                     className={styles.input}
-                    type="text"
+                    type="password"
                     onChange={onHandleChange}
                     value={password}
                 />
-                <p className={styles.textPass}>*Пароль должен состоять не менее, чем из 8 символов</p>
-                <Button className={styles.button} variant="primary" type="submit">Отправить</Button>
+                <p className={styles.textPass}>*Пароль має складати не менше, ніж 8 символів</p>
+                <Button className={styles.button} variant="primary" type="submit">Відправити</Button>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    />
+                    {/* Same as */}
                 <ToastContainer />
             </form>
         </>

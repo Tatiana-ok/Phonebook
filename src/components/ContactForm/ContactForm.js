@@ -21,9 +21,9 @@ function ContactForm({onSubmit}) {
   const handleSubmit = e => {
     e.preventDefault();
     if (name === '') {
-      toast.error('Поле "Имя" не заполнено');
+      toast.error('Поле "Им`я" не заповнено');
     } if (number === '') {
-      toast.error('Поле "Номер" не заполнено');
+      toast.error('Поле "Номер" не заповнено');
     } else {
       onSubmit({id, name, number});
       setNameContact('');
@@ -34,8 +34,8 @@ function ContactForm({onSubmit}) {
   return (
     <>
       <form className={s.containerForm} onSubmit={handleSubmit}>
-        <label>
-          <p>Имя</p>
+        <label className={s.nameBlok}>
+          <p className={s.labelTitle}>Имя</p>
           <input
             className={s.formInput}
             type="text"
@@ -43,8 +43,8 @@ function ContactForm({onSubmit}) {
             value={name}
           />
         </label>
-        <label>
-          <p>Номер</p>
+        <label className={s.numberBlock}>
+          <p className={s.labelTitle}>Номер</p>
           <input
             className={s.formInput}
             type="text"
@@ -100,7 +100,7 @@ export default connect(null, mapDispatchToProps)(ContactForm);
 //     return (
 //       <form className={s.containerForm} onSubmit={this.handleSubmit}>
 //         <label>
-//           <p>Имя</p>
+//           <p>Имя</p>0.
 //           <input
 //             className={s.formInput}
 //             type="text"

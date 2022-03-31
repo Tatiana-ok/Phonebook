@@ -7,8 +7,8 @@ import { Button } from 'react-bootstrap';
 const UserMenu = ({ userName, onLogOut }) => {
     return (
         <div className={styles.UserMenu}>
-            <p className={styles.welcome}>Добро пожаловать, {userName}</p>
-            <Button variant="primary" type="button" onClick={onLogOut}>Выйти</Button>
+            <p className={styles.welcome}>Ласкаво просимо, {userName}</p>
+            <Button className={styles.exitBtn} variant="primary" type="button" onClick={onLogOut}>Вийти</Button>
         </div>
     )
 };

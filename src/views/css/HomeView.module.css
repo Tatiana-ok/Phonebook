@@ -81,3 +81,13 @@ ul {
     transform: scale(1);
   }
 }
+
+.linkStart{
+  color: rgb(000,000,000);
+}
+
+.linkStart:hover,
+.linkStart:focus {
+  text-decoration: none;
+  color: rgb(000,000,000);
+}
